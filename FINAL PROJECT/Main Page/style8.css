@@ -1,0 +1,164 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    
+}
+.container {
+    width: 100%;
+    min-height: 100vh;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+    overflow: hidden;
+    background: linear-gradient(180deg, #52ACFF 25%, #FFE32C 100%);
+    display: grid;
+    align-items: center;
+}
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.logo {
+    width: 100px;
+    margin: 30px 0;
+}
+
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 60px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: blue;
+    font-size: 20px;
+    border-bottom: 2px solid transparent;
+}
+nav ul li a:hover {
+    border-bottom: 2px solid yellow;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px 0;
+}
+
+.col-1 {
+    flex-basis: 50%;
+    position: relative;
+    margin-left: 40px;
+}
+.col-1 h3 {
+    font-size: 55px;
+    font-family: 'Arizonia', cursive;
+}
+
+.col-1 p {
+font-size: 30px;
+font-weight: 100;
+margin: 15px 0 20px;
+}
+button {
+    width: 150px;
+    border: 0;
+    padding: 12px 10px;
+    outline: none;
+    background: linear-gradient(180deg, #52ACFF 25%, #FFE32C 100%);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: width 1s;
+    font-weight: 600;
+}
+
+button img {
+    width: 30px;
+    display: none;
+} 
+
+button:hover img {
+    display: block;
+}
+
+button:hover {
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+
+.col-1::after {
+    content: '';
+    width: 10px;
+    height: 57%;
+    background: linear-gradient(180deg, #52ACFF 25%, #FFE32C 100%);
+    position: absolute;
+    left: -40px;
+    top: 8px;
+}
+.col-2 {
+    position: relative;
+    flex-basis: 30%;
+    display: flex;
+    align-items: center;
+    
+}
+
+.col-2 .team-logo {
+    width: 75%;
+    border-radius: 25px;
+}
+
+@media only screen and (max-width:768px) {
+
+
+    nav ul {
+        width: 100%;
+        position: absolute;
+        top: 5px;
+        right: 0;
+    }
+
+    nav ul li {
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .logo {
+        width: 80px;
+        margin: 20px 0;
+    }
+
+    .row {
+        flex-direction: column-reverse;
+        margin: 55px 0;
+    }
+    .col-2 {
+        flex-basis: 100%;
+        margin-bottom: 95px;
+    }
+    .col-2 .team-logo {
+        width: 95%;
+    }
+    .col-1 {
+        flex-basis: 100%;   
+    }
+    .col-1 h3 {
+font-size: 30px;
+    }
+    .col-1 p {
+        font-size: 15px;
+            }
+}
